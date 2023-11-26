@@ -180,3 +180,23 @@ return &b;
 - 함수 포인터에 함수명을 대입하면 함수처럼 호출할 수 있다.
 - void 포인터에는 임의의 주소를 저장할 수 있다.
 - void 포인터는 간접 참조 연산과 주소에 대한 정수 연산이 불가능 하다.
+
+18-1. 동적 할당 함수
+- 동적 할당한 공간은 변수와 달리 이름이 없으므로 포인터에 주소를 대입하여 사용한다.
+- 동적 할당을 요청한 후에는 제대로 할당되었는지 반환값을 확인해야 한다.
+- 사용이 끝난 동적 할당 공간은 재활용을 위해 반환한다.
+- 동적 할당한 저장 공간을 배열처럼 쓸 때는 포인터가 배열명의 역할을 한다.
+- calloc 함수는 동적 할당한 저장 공간을 0으로 초기화 하고, realloc 함수는 크기를 바꿔 재할당 한다.
+```c
+//size 바이트 수 만큼 할당하고 시작 위치 반환
+malloc : void *malloc(unsigned int size); 
+
+//(count * size)바이트 수 만큼 할당하고 0으로 초기화 후 시작 위치 반환
+calloc : void *calloc(unsigned int count, unsigned int size); 
+
+//p가 연결한 영역의 크기를 size 바이트의 크기로 조정하고 시작 위치 반환
+realloc : void *realloc(void  *p, unsigned int size);
+
+//p가 연결한 영역 반환
+free : void free(void *p)'
+```
