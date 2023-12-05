@@ -230,3 +230,5 @@ free : void free(void *p)'
 20-2. 다양한 파일 입출력 함수
 - fgets 함수는 한 줄씩 입력하여 데이터를 모두 읽으면 NULL을 반환한다.
 - fscanf  함수와 fprintf 함수는 scanf, printf 함수와 사용법이 비슷하다.
+- fflush 함수는 출력할 때 사용며 스트림 버퍼의 내용을 즉시 장치로 기록한다.
+- fread와 fwrite 함수는 데이터의 크기를 지정해 입출력할 수 있다.
