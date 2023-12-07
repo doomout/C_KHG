@@ -232,3 +232,10 @@ free : void free(void *p)'
 - fscanf  함수와 fprintf 함수는 scanf, printf 함수와 사용법이 비슷하다.
 - fflush 함수는 출력할 때 사용며 스트림 버퍼의 내용을 즉시 장치로 기록한다.
 - fread와 fwrite 함수는 데이터의 크기를 지정해 입출력할 수 있다.
+
+21-1. 전처리 지시자
+- #include 는 지정한 파일을 소스 코드에 적절하게 포함 시킨다.
+- #define 는 매크로 상수와 매크로 함수를 만들 때 사용한다.
+- #if, #else, #elif, #ifdef, #ifndef, #endif 는 조건부 컴파일을 사용하는 조건부 컴파일 지시자다.
+- #pragma, #error, #line 등 컴파일 과정을 돕는 지시자가 있다.
+- defined, #, ##은 전처리 지시자와 함께 사용하는 전처리 연산자다.
